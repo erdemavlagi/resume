@@ -1,28 +1,17 @@
+{% extends 'layout.html' %}
 {%  load static %}
 
-<!doctype html>
-<html lang="en">
 
-{% include 'includes/head.html' %}
-
-    <body>
-
-{% include 'includes/navbar.html' %}
-
-        
-        <!--================Header Menu Area =================-->
-
-        <!--================Header Menu Area =================-->
-        
-        <!--================Home Banner Area =================-->
-        <section class="home_banner_area">
+                    {% block home_banner_area %}
+ <section class="home_banner_area">
            	<div class="container box_1620">
            		<div class="banner_inner d-flex align-items-center">
 					<div class="banner_content">
-						<div class="media">
-							<div class="d-flex">
-								<img src="{% get_media_prefix %}img/personal.jpg" alt="">
-							</div>
+
+                        <div class="media">
+			               <div class="d-flex">
+                               <img src="{% get_media_prefix %}img/personal.jpg" alt="">
+                           </div>
 							<div class="media-body">
 								<div class="personal_text">
 									<h6>Hello Everybody, i am</h6>
@@ -42,14 +31,20 @@
 									</ul>
 								</div>
 							</div>
-						</div>
-					</div>
+                        </div>
+
+                    </div>
 				</div>
             </div>
         </section>
-        <!--================End Home Banner Area =================-->
-        
-        <!--================Welcome Area =================-->
+                                {% endblock %}
+
+
+{% block content %}
+
+
+
+<!--================Welcome Area =================-->
         <section class="welcome_area p_120">
         	<div class="container">
         		<div class="row welcome_inner">
@@ -132,7 +127,7 @@
         	</div>
         </section>
         <!--================End Welcome Area =================-->
-        
+
         <!--================My Tabs Area =================-->
         <section class="mytabs_area p_120">
         	<div class="container">
@@ -231,7 +226,7 @@
         	</div>
         </section>
         <!--================End My Tabs Area =================-->
-        
+
         <!--================Feature Area =================-->
         <section class="feature_area p_120">
         	<div class="container">
@@ -265,7 +260,7 @@
         	</div>
         </section>
         <!--================End Feature Area =================-->
-        
+
         <!--================Home Gallery Area =================-->
         <section class="home_gallery_area p_120">
         	<div class="container">
@@ -364,7 +359,7 @@
         	</div>
         </section>
         <!--================End Home Gallery Area =================-->
-        
+
         <!--================Testimonials Area =================-->
         <section class="testimonials_area p_120">
         	<div class="container">
@@ -412,6 +407,15 @@
         	</div>
         </section>
         <!--================End Testimonials Area =================-->
+
+
+{% endblock %}
+
+
+
+
+        
+
         
         <!--================Footer Area =================-->
 
@@ -419,7 +423,3 @@
         
         
         
-{% include 'includes/footer.html' %}
-
-    </body>
-</html>
